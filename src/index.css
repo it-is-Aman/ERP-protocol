@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body{
+    background: #fff;
+}
+.main  .sidebarWrapper{height: 100vh;}
+.main   .sidebarWrapper .sidebar{height: 100vh; background: #fff;border-right: 1px solid rgba(0,0,0,0.3);}
+
+.main .sidebarWrapper .sidebar .sidebarTabs button{justify-content: flex-start !important; color:#222222; text-transform:capitalize; font-weight: 600;font-size: 14px; padding: 4px 10px!important; }
+.main .sidebarWrapper .sidebar .sidebarTabs button svg{font-size: 20px;}
+.main .sidebarWrapper .sidebar .sidebarTabs button .arrow{transition:all 0.3s;}
+.main .sidebarWrapper .sidebar .sidebarTabs button .arrow svg{font-size: 14px;}
+.main .sidebarwrapper .sidebar .sidebarTabs button:hover{background: #f1f1f1 !important;}
+.main .sidebarWrapper .sidebar .sidebarTabs button::before{content: '';width:3px;height:0%;position:absolute;top:50%; left:-5px; background: #3872fa;border-top-right-radius:5px;border-bottom-right-radius:5px; transition:all 0.3s;opacity: 0;}
+.main .sidebarWrapper .sidebar .sidebarTabs button .arrow.rotate{transform: rotate(90deg);}
+.main .sidebarWrapper .sidebar .sidebar button:hover::before,.main .sideWrapper .sidebar .sidebarTabs button.active::before{top:0px;height:100%;
+opacity:1;}
+.main .sidebarWrapper .sidebar .sidebarTabs button.active, .main .sideWrapper .sidebar .sidebarTabs button.active{color:#3872fa}
+.main .sidebarWrapper .sidebar .sidebarTabs ul{width:100%;margin-bottom:0px;}
+.main .sidebarWrapper .sidebar .sidebarTabs ul li{list-style-type: none;width:100%;}
+.main .sidebarWrapper .sidebar .sidebarTabs li button::before{display: none;}
+.main .sidebarWrapper .sidebar .sidebarTabs li .submenu button::after{content:''; width:5px; height:5px;background: #7a7a7a;border-radius: 100%;position:absolute;top:47%; left:10%}
+.main .sidebarWrapper .sidebar .sidebarTabs li .submenu button{padding: 4px 20px 4px 40px !important; font-weight: 600; color:rgba(0,0,0,0.5) !important; justify-content: flex-start !important;}
+.main .sidebarWrapper .sidebar .sidebarTabs li .submenu{position:relative;top:100%;left:0px;
+transition: all 0.3s; opacity:0;overflow:hidden;height:0;}
+.main .sidebarWrapper .sidebar .sidebarTabs li{position:relative;}
+.main .sidebarWrapper .sidebar .sidebarTabs li.colapse .submenu {height:auto;opacity: 1;}
+
+
+.main .sidebarWrapper .sidebar .sidebarTabs li  .submenuWrapper{transition: all 0.4s; height:0px;overflow:hidden;opacity:0;}
+.main .sidebarWrapper .sidebar .sidebarTabs li  .submenuWrapper.colapsed .submenu{opacity:0;}
+.main .sidebarWrapper .sidebar .sidebarTabs li  .submenuWrapper.colapse{height:auto;overflow:inherit;opacity:1;padding:10px 0px;
+}
+.main .sidebarWrapper .sidebar .sidebarTabs li  .submenuWrapper.colapse .submenu{opacity: 1; height:auto;}
+
+
+header{height:50px;width:83%;}
+.space{margin-top:30px;}
+header .part2 button{min-width:40px !important; height:40px !important; width:40px !important; border-radius: 100% !important;background: #f0f5ff !important;}
+header .part2 button svg{font-size: 16px ; color:#292929;}
+header .searchBox{border:1px solid rgba(0,0,0,0.3);overflow: hidden; border-radius:10px; cursor:pointer;}
+header .searchBox input{outline: none !important; font-size: 16px;}
+header .searchBox:hover{border:1px solid rgba(0,0,0,0.5);}
+
+/* .dashboardBoxWrapper{gap:20px;width:100%;flex-wrap:wrap;}
+.dashboardBoxWrapper .dashboardBox{width:48%;height:170px;border-radius:10px;overflow:hidden;padding:20px;display:flex;flex-direction:column;justify-content:space-around;text-align:left !important;position:relative;color:#fff;text-transform:capitalize !important;
+}
+.dashboardBoxWrapper .dashboardBox .col1 h4{font-size: 16px; font-weight: 600;}
+.dashboardBoxWrapper .dashboardBox .col1 span{font-size: 35px !important; font-weight: bold; line-height: 45px;}
+.dashboardBoxWrapper .dashboardBox .icon{display: flex; align-items: center;justify-content: center; width: 50px; height: 50px;border-radius:10px; background-image: linear-gradient(to bottom right,rgba(0,0,0,0),rgba(0,0,0,0.3));}
+.dashboardBoxWrapper .dashboardBox .icon svg{font-size: 36px; opacity:0.4; color:#fff;}
+.dashboardBoxWrapper .dashboardBox .toggleIcon{ font-size: 22px ; color:rgba(0,0,0,0.5);cursor: pointer; min-width: 40px!important; width: 40px !important; height:40px !important; border-radius: 50% !important;}
+.dashboardBoxWrapper .dashboardBox .chart{opacity:0.050; position: absolute;bottom: 20px;left:20px;}
+.dashboardBoxWrapper .dashboardBox .chart svg{font-size: 110px; color:#000;}
+.dashboardBoxWrapper .dashboardBox .bottomEle{position: relative;top:15px;}
+.dashboardBoxWrapperRow .box{width:100%; height:100%;}
+.dashboardBoxWrapperRowV2 .dashboardBox{width:32%; height:120px !important;}
+.dashboardBoxWrapperRowV2 .dashboardBox .bottomEle{display:none !important;}
+.dashboardBoxWrapper .dashboardBox .MuiList-root svg{color:#000 !important; font-size: 17px !important; margin-left:10px !important;}
+.dropdown_menu .MuiButtonBase-root svg{margin-right: 10px !important;}
+.graphBox{
+    background-image: linear-gradient(#1a50b5,#2a6ff7); border-radius: 10px; padding:25px;
+}
+.toggleIcon{font-size: 22px; color:rgba(0,0,0,0.5); cursor: pointer; min-width: 40px !important; width: 40px !important; height: 40px !important; border-radius: 50% !important; }
+.toggleIcon svg{color:#fff !important; font-size: 20px !important;opacity: 1 !important; }
+.graphBox h4{font-size: 16px; font-weight: 600;}
+.graphBox p{font-size: 13px;color:#fff;opacity:0.7;} */
+/* .card{margin:20px 0px; border-radius: 10px;}
+.card .hd{font-size: 18px; font-weight: bold; color:#10214b;}
+body.dark .card{background: #1b2b4d !important; border:1px solid #10214b !important;}
+body.dark .card .hd{font-size: 18px; font-weight: bold; color:rgba(255,255,255,0.8);}
+body.dark .cardFilters .col-md-3 h4{color:rgba(255,255,255,0.8);}
+ */
+.content{width:80%; flex:0 0 80%;}
+.right-content{padding:90px 30px;}
+.dashboardBoxWrapper{gap:20px;width:100%;flex-wrap:wrap;}
+.dashboardBoxWrapper .dashboardBox{width:48%;height:200px;border-radius:10px;overflow:hidden;padding:20px;display:flex;flex-direction:column;justify-content:space-around;text-align:left !important;position:relative;color:#fff;text-transform:capitalize !important ;background: rgb(224, 221, 221);
+}
+.dashboardBoxWrapperRow .box{width:100%; height:100%;background: #7a7a7a;border-radius: 10px;}
