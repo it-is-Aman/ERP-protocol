@@ -14,11 +14,11 @@ const navLinks=[
     href:"/",
   },
   {
-    title:'Recant Activity',
+    title:'Recent Activity',
     href:"/",
   },
   {
-    title:'Recant Update',
+    title:'Recent Update',
     href:"/",
   }
 ]
